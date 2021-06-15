@@ -16,6 +16,8 @@ const login = require("./routes/login.router");
 const signup = require("./routes/signup.router");
 const videos = require("./routes/videos.router");
 const playlists = require("./routes/playlists.router");
+// temporary, to be removed from here
+const quiz = require("./routes/quiz.router");
 
 var corsOptions = {
   // origin: 'https://watch-finsight.vercel.app'
@@ -34,6 +36,8 @@ app.use("/login", login);
 app.use("/signup", signup);
 app.use("/videos", videos);
 app.use("/playlists", playlists);
+// temporary, to be removed from here
+app.use("/quiz", quiz);
 
 const findUserByEmail = (email) => {
   return users.find(user => user.email === email);
